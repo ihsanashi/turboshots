@@ -2,6 +2,9 @@ export default {
   name: 'asset',
   type: 'document',
   title: 'Asset',
+  initialValue: {
+    visible: true,
+  },
   fields: [
     {
       name: 'caption',
@@ -14,6 +17,12 @@ export default {
       title: 'Location',
       type: 'string',
       description: 'Where the shot was taken',
+    },
+    {
+      name: 'visible',
+      title: 'Visible',
+      type: 'boolean',
+      description: 'Display or hide in frontend application',
     },
     {
       name: 'path',
