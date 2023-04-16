@@ -4,8 +4,8 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'asset',
-      title: 'Asset',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       description: 'For display',
       options: {
@@ -62,18 +62,6 @@ export default {
       title: 'Taken At',
       type: 'datetime',
       description: 'When the shot was taken',
-    },
-    {
-      name: 'uploaded_at',
-      title: 'Uploaded At',
-      type: 'datetime',
-      description: 'When the shot was uploaded to Sanity',
-    },
-    {
-      name: 'last_modified_at',
-      title: 'Last Modified At',
-      type: 'datetime',
-      description: 'When the shot was last updated',
     },
   ],
 }
