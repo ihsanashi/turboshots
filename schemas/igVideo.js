@@ -14,10 +14,15 @@ export default {
       },
     },
     {
+      name: 'path',
+      title: 'Path',
+      type: 'string',
+      description: 'Relative path of asset',
+    },
+    {
       name: 'caption',
       title: 'Caption',
-      type: 'array',
-      of: [{ type: 'block' }],
+      type: 'text',
       description: 'Caption to display',
     },
     {
@@ -50,12 +55,6 @@ export default {
       title: 'Visible',
       type: 'boolean',
       description: 'Display or hide in frontend application',
-    },
-    {
-      name: 'path',
-      title: 'Path',
-      type: 'string',
-      description: 'Relative path of asset',
     },
     {
       name: 'taken_at',
