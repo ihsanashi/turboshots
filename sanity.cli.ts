@@ -2,12 +2,14 @@
 import { defineCliConfig } from 'sanity/cli'
 
 export default defineCliConfig({
+  api: {
+    projectId: "2ciw864r",
+    dataset: "production"
+  },
   graphql: [
     {
-      playground: false,
-      tag: 'experiment',
-      workspace: 'staging',
-      id: 'schema-experiment',
+      playground: true,
+      tag: 'default',
     },
   ],
 })

@@ -8,12 +8,6 @@ export default defineConfig({
   projectId: '2ciw864r',
   dataset: 'production',
   plugins: [deskTool(), visionTool()],
-  tools: (prev) => {
-    if (import.meta.env.DEV) {
-      return prev
-    }
-    return prev.filter((tool) => tool.name !== 'vision')
-  },
   schema: {
     types: schemas,
   },
