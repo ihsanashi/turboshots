@@ -2,6 +2,22 @@ export default {
   name: 'igVideo',
   title: 'IG Video',
   type: 'document',
+  preview: {
+    select: {
+      path: 'path',
+      caption: 'caption',
+      file: 'file',
+    },
+    prepare(selection) {
+      const { path, caption, file } = selection
+      return {
+        title: `${path.replace('instagram/', '')}`,
+        subtitle: caption,
+        media: file,
+        // Show ✅ if file is uploaded/present, otherwise show 🚫
+      }
+    },
+  },
   fields: [
     {
       name: 'file',
