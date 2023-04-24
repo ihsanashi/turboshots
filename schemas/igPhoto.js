@@ -2,6 +2,21 @@ export default {
   name: 'igPhoto',
   title: 'IG Photo',
   type: 'document',
+   preview: {
+    select: {
+      path: 'path',
+      caption: 'caption',
+      image: 'image',
+    },
+    prepare(selection) {
+      const { path, caption, image } = selection
+      return {
+        title: `${path.replace('instagram/', '')}`,
+        subtitle: caption,
+        media: image,
+      }
+    },
+  },
   fields: [
     {
       name: 'image',
@@ -16,8 +31,7 @@ export default {
     {
       name: 'caption',
       title: 'Caption',
-      type: 'array',
-      of: [{ type: 'block' }],
+      type: 'text',
       description: 'Caption to display',
     },
     {
