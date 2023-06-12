@@ -17,15 +17,15 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/default-layout": "^2.35.7",
-    "@sanity/default-login": "^2.35.7",
+    "@sanity/default-layout": "^2.36.1",
+    "@sanity/default-login": "^2.36.1",
     "@sanity/eslint-config-studio": "^2.0.1",
-    "@sanity/vision": "^3.8.3",
-    "eslint": "^8.6.0",
+    "@sanity/vision": "^3.12.0",
+    "eslint": "^8.42.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sanity": "^3.9.0",
-    "styled-components": "^5.2.0"
+    "sanity": "^3.12.0",
+    "styled-components": "^6.0.0-rc.3"
   }
 }
