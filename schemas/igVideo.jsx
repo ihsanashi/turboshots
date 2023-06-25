@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default {
   name: 'igVideo',
   title: 'IG Video',
@@ -9,13 +11,19 @@ export default {
       file: 'file',
     },
     prepare(selection) {
-      const { path, caption, file } = selection
+      const { path, file } = selection;
+
+      console.log('selection', selection);
+
       return {
-        title: `${path.replace('instagram/', '')}`,
-        subtitle: caption,
-        media: file,
-        // Show ✅ if file is uploaded/present, otherwise show 🚫
-      }
+        title: `${file.asset._ref.replace('file-', '').replace('-mp4', '')}`,
+        subtitle: `${path.replace('instagram/', '')}`,
+        media: (
+          <span style={{ fontSize: '1.5rem' }}>
+            {file.asset._ref ? '📹' : '🚫'}
+          </span>
+        ),
+      };
     },
   },
   fields: [
@@ -79,4 +87,4 @@ export default {
       description: 'When the shot was taken',
     },
   ],
-}
+};
