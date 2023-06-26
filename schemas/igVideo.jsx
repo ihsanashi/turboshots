@@ -6,18 +6,22 @@ export default {
   type: 'document',
   preview: {
     select: {
-      path: 'path',
-      caption: 'caption',
+      _id: '_id',
       file: 'file',
+      path: 'path',
     },
     prepare(selection) {
-      const { path, file } = selection;
+      const { _id, path, file } = selection;
 
       console.log('selection', selection);
 
       return {
-        title: `${file.asset._ref.replace('file-', '').replace('-mp4', '')}`,
-        subtitle: `${path.replace('instagram/', '')}`,
+        title: _id,
+        subtitle: `${
+          path.includes('/videos/')
+            ? path.replace('instagram/videos/', '')
+            : path.replace('instagram/stories/', '')
+        }`,
         media: (
           <span style={{ fontSize: '1.5rem' }}>
             {file.asset._ref ? '📹' : '🚫'}
