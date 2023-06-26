@@ -1,20 +1,30 @@
+import React from 'react';
+
 export default {
   name: 'igPhoto',
   title: 'IG Photo',
   type: 'document',
-   preview: {
+  preview: {
     select: {
-      path: 'path',
-      caption: 'caption',
+      _id: '_id',
       image: 'image',
+      path: 'path',
     },
     prepare(selection) {
-      const { path, caption, image } = selection
+      const { _id, path, image } = selection;
       return {
-        title: `${path.replace('instagram/', '')}`,
-        subtitle: caption,
-        media: image,
-      }
+        title: _id,
+        subtitle: `${
+          path.includes('/photos/')
+            ? path.replace('instagram/photos/', '')
+            : path.replace('instagram/stories/', '')
+        }`,
+        media: (
+          <span style={{ fontSize: '1.5rem' }}>
+            {image.sanityAsset ? '📷' : '🚫'}
+          </span>
+        ),
+      };
     },
   },
   fields: [
@@ -27,6 +37,12 @@ export default {
         hotspot: true,
         storeOriginalFilename: true,
       },
+    },
+    {
+      name: 'path',
+      title: 'Path',
+      type: 'string',
+      description: 'Relative path of asset',
     },
     {
       name: 'caption',
@@ -66,16 +82,10 @@ export default {
       description: 'Display or hide in frontend application',
     },
     {
-      name: 'path',
-      title: 'Path',
-      type: 'string',
-      description: 'Relative path of asset',
-    },
-    {
       name: 'taken_at',
       title: 'Taken At',
       type: 'datetime',
       description: 'When the shot was taken',
     },
   ],
-}
+};
