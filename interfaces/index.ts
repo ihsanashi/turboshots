@@ -1,2 +1,1 @@
-export * from './Video.ts';
-export * from './Photo.ts';
+export * from './Asset.ts';

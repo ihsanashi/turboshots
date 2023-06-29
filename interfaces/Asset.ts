@@ -1,4 +1,4 @@
-export interface Photo {
+export interface Asset {
   _type: string;
   caption: string;
   location: string;
