@@ -12,9 +12,6 @@ export default {
     },
     prepare(selection) {
       const { _id, path, file } = selection;
-
-      console.log('selection', selection);
-
       return {
         title: _id,
         subtitle: `${
