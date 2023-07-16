@@ -14,11 +14,7 @@ export default {
       const { _id, path, image } = selection;
       return {
         title: _id,
-        subtitle: `${
-          path.includes('/photos/')
-            ? path.replace('instagram/photos/', '')
-            : path.replace('instagram/stories/', '')
-        }`,
+        subtitle: `${path.replace('instagram/', '')}`,
         media: (
           <span style={{ fontSize: '1.5rem' }}>
             {image.sanityAsset ? '📷' : '🚫'}

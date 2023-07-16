@@ -14,11 +14,7 @@ export default {
       const { _id, path, file } = selection;
       return {
         title: _id,
-        subtitle: `${
-          path.includes('/videos/')
-            ? path.replace('instagram/videos/', '')
-            : path.replace('instagram/stories/', '')
-        }`,
+        subtitle: `${path.replace('instagram/', '')}`,
         media: (
           <span style={{ fontSize: '1.5rem' }}>
             {file.asset._ref ? '📹' : '🚫'}
