@@ -7,7 +7,7 @@ export default {
   preview: {
     select: {
       _id: '_id',
-      image: 'image',
+      image: 'image.asset',
       path: 'path',
     },
     prepare(selection) {
@@ -15,11 +15,7 @@ export default {
       return {
         title: _id,
         subtitle: `${path.replace('instagram/', '')}`,
-        media: (
-          <span style={{ fontSize: '1.5rem' }}>
-            {image.sanityAsset ? '📷' : '🚫'}
-          </span>
-        ),
+        media: image,
       };
     },
   },
