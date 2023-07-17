@@ -7,18 +7,21 @@ export default {
   preview: {
     select: {
       _id: '_id',
-      file: 'file',
       path: 'path',
     },
     prepare(selection) {
-      const { _id, path, file } = selection;
+      const { _id, path } = selection;
       return {
         title: _id,
         subtitle: `${path.replace('instagram/', '')}`,
         media: (
-          <span style={{ fontSize: '1.5rem' }}>
-            {file.asset._ref ? '📹' : '🚫'}
-          </span>
+          <video height="200" width="200" muted>
+            <source
+              src={`https://cdn.sanity.io/files/2ciw864r/production/${_id}.mp4`}
+              type="video/mp4"
+            />
+            Your browser does not support video tag.
+          </video>
         ),
       };
     },
