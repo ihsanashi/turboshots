@@ -22,13 +22,13 @@
     "@sanity/default-layout": "^2.36.1",
     "@sanity/default-login": "^2.36.1",
     "@sanity/eslint-config-studio": "^2.0.4",
-    "@sanity/vision": "^3.14.2",
+    "@sanity/vision": "^3.14.3",
     "eslint": "^8.45.0",
     "p-queue": "^7.3.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sanity": "^3.14.2",
+    "sanity": "^3.14.3",
     "styled-components": "^6.0.4"
   },
   "devDependencies": {
