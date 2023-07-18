@@ -36,6 +36,8 @@ export default {
         accept: 'video/*',
         storeOriginalFilename: true,
       },
+      validation: (Rule) =>
+        Rule.required().error('A file is required for each document.'),
     },
     {
       name: 'path',

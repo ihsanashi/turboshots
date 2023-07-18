@@ -29,6 +29,8 @@ export default {
         hotspot: true,
         storeOriginalFilename: true,
       },
+      validation: (Rule) =>
+        Rule.required().error('An image is required for each document.'),
     },
     {
       name: 'path',
