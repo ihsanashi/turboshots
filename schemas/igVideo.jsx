@@ -58,25 +58,6 @@ export default {
       description: 'Where this was taken',
     },
     {
-      name: 'type',
-      title: 'Type',
-      type: 'string',
-      options: {
-        list: [
-          {
-            title: 'Feed',
-            value: 'feed',
-          },
-          {
-            title: 'Story',
-            value: 'story',
-          },
-        ],
-        layout: 'dropdown',
-      },
-      description: 'Define the feed it was first posted to',
-    },
-    {
       name: 'visible',
       title: 'Visible',
       type: 'boolean',
