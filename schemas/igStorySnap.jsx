@@ -12,7 +12,7 @@ export default {
       const { _id, path, image } = selection;
       return {
         title: _id,
-        subtitle: `${path.replace('instagram/', '')}`,
+        subtitle: `${path.replace('instagram/stories/', '')}`,
         media: image,
       };
     },

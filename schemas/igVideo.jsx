@@ -13,7 +13,7 @@ export default {
       const { _id, path } = selection;
       return {
         title: _id,
-        subtitle: `${path.replace('instagram/', '')}`,
+        subtitle: `${path.replace('instagram/videos/', '')}`,
         media: (
           <video height="200" width="200" muted>
             <source
