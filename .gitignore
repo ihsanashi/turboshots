@@ -2,4 +2,4 @@
 .env*
 
 /sources
-sanity*.ts
+sanity-*.ts
