@@ -1,37 +1,20 @@
 {
-  "name": "shots",
-  "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "main": "package.json",
-  "author": "Ahmad Ihsan Zainuddin <ihsanashi@gmail.com>",
-  "type": "module",
-  "license": "UNLICENSED",
+  "name": "turboshots",
+  "version": "0.0.0",
   "scripts": {
-    "start": "sanity start",
-    "build": "sanity build",
-    "dev": "sanity dev",
-    "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
-  },
-  "keywords": [
-    "sanity"
-  ],
-  "dependencies": {
-    "@sanity/client": "^6.4.9",
-    "@sanity/default-layout": "^2.36.2",
-    "@sanity/default-login": "^2.36.2",
-    "@sanity/eslint-config-studio": "^3.0.0",
-    "@sanity/vision": "^3.15.1",
-    "eslint": "^8.47.0",
-    "p-queue": "^7.3.4",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sanity": "^3.15.1",
-    "styled-components": "^6.0.7"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/.{ts,tsx,md\""
   },
   "devDependencies": {
-    "tsx": "^3.12.7"
-  }
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "pnpm@1.10.12"
 }
