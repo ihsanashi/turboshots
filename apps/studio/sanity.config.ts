@@ -4,7 +4,7 @@ import schemas from './schemas/schema.js';
 import { visionTool } from '@sanity/vision';
 
 const config = defineConfig({
-  title: 'shots',
+  title: 'Shots | Studio',
   projectId: '2ciw864r',
   dataset: 'production',
   apiVersion: '2023-19-08',
