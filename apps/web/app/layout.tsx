@@ -1,22 +1,37 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import 'css/tailwind.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { NavBar } from '@/components/NavBar';
+import { Footer } from '@/components/Footer';
+import { siteMetadata } from '@/data/siteMetadata';
+import { SectionContainer } from '@/components/SectionContainer';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Shots | by Ahmad Ihsan',
-  description: 'An online gallery of media content retrieved from my Instagram account',
-}
+  title: {
+    default: siteMetadata.title,
+    template: `${siteMetadata.title} | by ${siteMetadata.author}`,
+  },
+  description: siteMetadata.description,
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang={siteMetadata.language} className='scroll-smooth'>
+      <body className={inter.className}>
+        <SectionContainer>
+          <div className='flex h-screen flex-col justify-between'>
+            <NavBar />
+            <main className='mb-auto'>{children}</main>
+            <Footer />
+          </div>
+        </SectionContainer>
+      </body>
     </html>
-  )
+  );
 }
