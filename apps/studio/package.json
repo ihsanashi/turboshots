@@ -10,7 +10,7 @@
   "scripts": {
     "start": "sanity start",
     "build": "sanity build",
-    "dev": "sanity dev",
+    "dev": "sanity dev --port 3333",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy"
   },
