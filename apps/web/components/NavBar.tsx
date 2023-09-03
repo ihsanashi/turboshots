@@ -18,7 +18,7 @@ export const NavBar = () => {
             <Link
               href={link.href}
               key={link.title}
-              className='hidden sm:block font-medium text-gray-900 dark:text-gray-100'
+              className='hidden sm:block font-normal text-gray-900 dark:text-gray-100'
             >
               {link.title}
             </Link>

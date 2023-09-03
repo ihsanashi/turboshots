@@ -29,7 +29,7 @@ export const MobileNav = () => {
         Toggle
       </button>
       <div
-        className={`fixed md:hidden left-0 top-0 z-10 h-full w-full transform opacity-95 dark:opacity-[0.98] bg-white duration-300 ease-in-out dark:bg-gray-950 ${
+        className={`fixed left-0 top-0 z-10 h-full w-full transform opacity-95 dark:opacity-[0.98] bg-white duration-300 ease-in-out dark:bg-gray-950 ${
           showNav ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
