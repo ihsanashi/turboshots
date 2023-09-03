@@ -6,6 +6,9 @@ import { Footer } from '@/components/Footer';
 import { siteMetadata } from '@/data/siteMetadata';
 import { SectionContainer } from '@/components/SectionContainer';
 
+// include styles from the ui package
+import 'ui/styles.css';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
