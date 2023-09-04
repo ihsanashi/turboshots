@@ -67,7 +67,12 @@ export default function Home() {
       <h1 className='text-2xl font-bold'>Hello world</h1>
       <Paragraph text='Well hello there' />
       <Button>Boop</Button>
-      <Select placeholder='Select one' ariaLabel='Select menu'>
+      <Select
+        placeholder='Select one'
+        ariaLabel='Select menu'
+        size='medium'
+        intent='fill'
+      >
         <Select.Content>
           <Select.Group label='Fruits' items={fruits} />
           <Select.Separator />

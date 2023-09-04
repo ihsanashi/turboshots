@@ -1,37 +1,78 @@
 'use client';
 
-import { clsx } from 'clsx';
 import {
-  ComponentProps,
   ComponentPropsWithoutRef,
   ElementRef,
   ReactNode,
   forwardRef,
 } from 'react';
-import * as SelectPrimitive from '@radix-ui/react-select';
 import { FiChevronDown, FiChevronUp, FiCheck } from 'react-icons/fi';
+import { cva, VariantProps } from 'class-variance-authority';
+import * as SelectPrimitive from '@radix-ui/react-select';
+import { twMerge } from 'tailwind-merge';
+import { clsx } from 'clsx';
 
 // Todos:
 // 1. Add support for variants (classic, soft, ghost)
 // 2. Add support for Tailwind colours
 // 3. Add support for radius prop
 
+const selectTriggerVariants = cva(
+  'ui-px-3 ui-inline-flex ui-items-center ui-justify-center ui-rounded ui-gap-1.5 ui-leading-none ui-outline-none data-[placeholder]:ui-text-slate-600 focus:ui-outline-slate-700',
+  {
+    variants: {
+      intent: {
+        fill: 'ui-bg-opacity-100',
+        soft: 'ui-bg-opacity-20',
+        ghost: 'ui-bg-opacity-0',
+      },
+      radius: {
+        none: 'ui-rounded-none',
+        small: 'ui-rounded-sm',
+        medium: 'ui-rounded-md',
+        large: 'ui-rounded-lg',
+        xl: 'ui-rounded-2xl',
+        full: 'ui-rounded-full',
+      },
+      size: {
+        small: 'ui-h-4 ui-text-sm',
+        medium: 'ui-h-7 ui-text-base',
+        large: 'ui-h-10 ui-text-lg',
+      },
+    },
+    defaultVariants: {
+      intent: 'fill',
+      radius: 'small',
+      size: 'medium',
+    },
+  }
+);
+
+export interface SelectTriggerVariants
+  extends VariantProps<typeof selectTriggerVariants> {}
+
 interface SelectProps {
   ariaLabel?: string;
-  placeholder?: string;
   children: ReactNode;
+  intent?: 'fill' | 'soft' | 'ghost';
+  placeholder?: string;
+  radius?: 'none' | 'small' | 'medium' | 'large' | 'xl' | 'full';
+  size?: 'small' | 'medium' | 'large';
 }
 
 export const Select = ({
   ariaLabel = 'Select menu',
-  placeholder = 'Select...',
   children,
+  intent,
+  placeholder = 'Select...',
+  radius,
+  size,
 }: SelectProps) => {
   return (
     <SelectPrimitive.Root>
       <SelectPrimitive.Trigger
         aria-label={ariaLabel}
-        className='ui-px-3 ui-inline-flex ui-items-center ui-justify-center ui-rounded ui-gap-1.5 data-[placeholder]:ui-text-slate-600 ui-outline-none focus-within:ui-outline-red-500'
+        className={twMerge(selectTriggerVariants({ intent, radius, size }))}
       >
         <SelectPrimitive.Value placeholder={placeholder} />
         <SelectPrimitive.Icon>
