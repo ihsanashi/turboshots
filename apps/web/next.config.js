@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  transpilePackages: ['sanity-config'],
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
