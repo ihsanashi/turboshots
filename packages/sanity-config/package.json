@@ -1,0 +1,13 @@
+{
+  "name": "sanity-config",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "next-sanity": "^5.4.6",
+    "sanity": "^3.16.4"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*",
+    "typescript": "latest"
+  }
+}
