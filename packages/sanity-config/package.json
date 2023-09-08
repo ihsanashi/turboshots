@@ -3,6 +3,7 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "dependencies": {
+    "@apollo/client": "^3.8.3",
     "next-sanity": "^5.4.6",
     "sanity": "^3.16.4"
   },
