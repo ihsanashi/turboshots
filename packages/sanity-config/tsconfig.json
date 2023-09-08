@@ -14,6 +14,9 @@
       "@functions/*": [
         "functions/*"
       ],
+      "@queries/*": [
+        "queries/*"
+      ],
       "@schemas/*": [
         "schemas/*"
       ]
