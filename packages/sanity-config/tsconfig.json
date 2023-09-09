@@ -14,8 +14,11 @@
       "@functions/*": [
         "functions/*"
       ],
-      "@queries/*": [
-        "queries/*"
+      "@gql-queries/*": [
+        "gql-queries/*"
+      ],
+      "@groq-queries/*": [
+        "groq-queries/*"
       ],
       "@schemas/*": [
         "schemas/*"
