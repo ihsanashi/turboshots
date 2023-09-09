@@ -15,10 +15,10 @@ export default {
         title: _id,
         subtitle: `${path.replace('instagram/videos/', '')}`,
         media: (
-          <video height="200" width="200" muted>
+          <video height='200' width='200' muted>
             <source
-              src={`https://cdn.sanity.io/files/2ciw864r/production/${_id}.mp4`}
-              type="video/mp4"
+              src={`https://apicdn.sanity.io/files/2ciw864r/production/${_id}.mp4`}
+              type='video/mp4'
             />
             Your browser does not support video tag.
           </video>
