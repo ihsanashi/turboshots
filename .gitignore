@@ -38,5 +38,8 @@ yarn-error.log*
 # ui
 dist/
 
-# vscoded
+# vscode
 .vscode
+
+# sanity
+packages/sanity-config/sanity.json
