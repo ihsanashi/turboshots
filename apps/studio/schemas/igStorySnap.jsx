@@ -19,6 +19,16 @@ export default {
   },
   fields: [
     {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      description:
+        'This field will be used by the frontend to differentiate between each different post',
+      option: {
+        maxLength: 200,
+      },
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',
