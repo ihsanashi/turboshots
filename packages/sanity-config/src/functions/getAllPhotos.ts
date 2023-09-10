@@ -11,7 +11,7 @@ export async function getAllPhotos(): Promise<igPhoto[]> {
     image,
     location,
     path,
-    taken_at,
+    takenAt,
     visible
   }`);
 }

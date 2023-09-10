@@ -64,7 +64,7 @@ export default {
       description: 'Display or hide in frontend application',
     },
     {
-      name: 'taken_at',
+      name: 'takenAt',
       title: 'Taken At',
       type: 'datetime',
       description: 'When the shot was taken',

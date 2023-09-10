@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const GET_ALL_IG_STORY_SNAPS = gql`
   query allIgStorySnaps($offset: Int) {
-    allIgStorySnap(sort: { taken_at: ASC }, limit: 10, offset: $offset) {
+    allIgStorySnap(sort: { takenAt: DESC }, limit: 10, offset: $offset) {
       _id
       _createdAt
       _updatedAt
@@ -24,7 +24,7 @@ export const GET_ALL_IG_STORY_SNAPS = gql`
       caption
       location
       visible
-      taken_at
+      takenAt
     }
   }
 `;
