@@ -1,0 +1,5 @@
+# sanity project details
+sanity.json
+
+# sanity bulk upload
+/src/upload/*
